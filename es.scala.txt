@@ -19,7 +19,7 @@ object lab16 {
         val ds = ssc.socketTextStream("localhost", 9999)
         val ds1 = ds.map(x => x.split(",")).map(x=> empinfo(x(0).toString,x(1).toString,x(2).toInt))
         ds1.print()
-        ds1.saveToEs("empinfo/emp")
+        ds1.saveToEs("empinfo/emp1")
         ssc.start()
         ssc.awaitTermination()
   }
